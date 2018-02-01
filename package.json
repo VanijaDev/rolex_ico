@@ -1,0 +1,26 @@
+{
+  "name": "rolex_ico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanijaDev/rolex_ico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VanijaDev/rolex_ico/issues"
+  },
+  "homepage": "https://github.com/VanijaDev/rolex_ico#readme",
+  "dependencies": {
+    "zeppelin-solidity": "1.6.0"
+  }
+}
