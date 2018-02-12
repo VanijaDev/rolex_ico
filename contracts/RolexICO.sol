@@ -4,10 +4,12 @@ import "../node_modules/zeppelin-solidity/contracts/crowdsale/CappedCrowdsale.so
 import "./RolexToken.sol";
 
 contract RolexICO is CappedCrowdsale {
-  
-  function RolexICO(uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet, uint256 _cap) 
+
+  function RolexICO(uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet, uint256 _cap)
+    CappedCrowdsale(_cap)
     Crowdsale(_startTime, _endTime, _rate, _wallet)
-    CappedCrowdsale(_cap) public {
+    public
+  {
 
   }
 

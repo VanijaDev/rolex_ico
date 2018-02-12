@@ -9,6 +9,6 @@ contract RolexToken is MintableToken {
   uint8 public constant decimals = 1;  // 18 is the most common number of decimal places
 
   function RolexToken() public {
-    totalSupply_ = 1; //  it works inly with positive value. Is I remove this line, I get error, while trying to mint coins.
+    // totalSupply_ = 1; //  it works inly with positive value. Is I remove this line, I get error, while trying to mint coins.
   }
 }
