@@ -17,13 +17,20 @@ contract('RolexICO', function (accounts) {
         token = RolexToken.at(addr)
         return token
       })
-      .then(function () { setTimeout(done, 1000) })
+      .then(function () {
+        setTimeout(done, 1000)
+      })
       .catch(done)
   })
 
-  it('should allow purchasing tokens', function(done) {
-    ico.buyTokens(acc0, { value: 200, from: acc0 })
-      .then(function () { done() })
+  it('should allow purchasing tokens', function (done) {
+    ico.buyTokens(acc0, {
+        value: 200,
+        from: acc0
+      })
+      .then(function () {
+        done()
+      })
       .catch(done)
   })
 
@@ -32,7 +39,20 @@ contract('RolexICO', function (accounts) {
       .then(function (balance) {
         assert(balance.eq(200))
       })
-      .then(function () { done() })
+      .then(function () {
+        done()
+      })
+      .catch(done)
+  })
+
+  it('should have 200 in totalSupply', function (done) {
+    token.totalSupply()
+      .then(function (res) {
+        assert.equal(res.toNumber(), 200, 'wrong totalSupply')
+      })
+      .then(function () {
+        done()
+      })
       .catch(done)
   })
 })
