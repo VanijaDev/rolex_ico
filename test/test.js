@@ -48,7 +48,7 @@ contract('RolexICO', function (accounts) {
   it('should have 200 in totalSupply', function (done) {
     token.totalSupply()
       .then(function (res) {
-        assert.equal(res.toNumber(), 2000, 'wrong totalSupply')
+        assert.equal(res.toNumber(), 200, 'wrong totalSupply')
       })
       .then(function () {
         done()
