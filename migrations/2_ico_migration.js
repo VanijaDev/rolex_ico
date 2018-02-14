@@ -8,9 +8,9 @@ module.exports = function (deployer) {
     const _rate = 1; //  token per wei
     const _wallet = web3.eth.accounts[4];
     const _icoCap = 2000000000000000000; //  2 ETH
-    const decimals = 1;
-    const _tokenTotalSupplyLimit = 1000000; // 50 * 10 ** decimals; //  50 tokens
+    const decimals = 0;
+    const _tokenTotalSupplyLimit = 50 * 10 ** decimals; //  50 tokens
     const _icoTokenPercents = 65; //  %
 
-    deployer.deploy(RolexICO, _startTime, _endTime, _rate, _wallet, _icoCap);
+    deployer.deploy(RolexICO, _startTime, _endTime, _rate, _wallet, _icoCap, _tokenTotalSupplyLimit);
 };
